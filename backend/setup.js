@@ -2,19 +2,24 @@ import mysql from 'mysql2/promise';
 import dotenv from 'dotenv';
 dotenv.config();
 
+console.log("DB_HOST:", process.env.DB_HOST);
+
 async function setup() {
   const connection = await mysql.createConnection({
-    host: process.env.DB_HOST || 'localhost',
-    user: process.env.DB_USER || 'root',
-    password: process.env.DB_PASSWORD || '',
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    port: process.env.DB_PORT,
+    ssl: {
+    rejectUnauthorized: false
+  }
   });
 
   try {
     await connection.execute('CREATE DATABASE IF NOT EXISTS bookbazar');
     console.log('Database "bookbazar" created');
 
-    await connection.changeUser({ database: 'bookbazar' });
-
+    await connection.changeUser({ database: process.env.DB_NAME });
     await connection.execute(`
       CREATE TABLE IF NOT EXISTS users (
         id INT AUTO_INCREMENT PRIMARY KEY,
