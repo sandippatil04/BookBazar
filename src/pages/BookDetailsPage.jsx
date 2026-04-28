@@ -61,7 +61,9 @@ export default function BookDetailsPage() {
   }
 
   const discount = Math.round(((book.price - book.selling_price) / book.price) * 100);
-  const imageUrl = book.image ? `/uploads/${book.image}` : null;
+  const imageUrl = book.image
+  ? `${import.meta.env.VITE_API_URL}/uploads/${book.image}`
+  : null;
 
   return (
     <div className="min-h-screen bg-gray-50/50 pt-24">

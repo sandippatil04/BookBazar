@@ -40,7 +40,9 @@ export default function CartPage() {
 
         <div className="mt-8 space-y-4">
           {cart.map((item) => {
-            const imageUrl = item.image ? `/uploads/${item.image}` : null;
+            const imageUrl = item.image
+              ? `${import.meta.env.VITE_API_URL}/uploads/${item.image}`
+              : null;
             const discount = Math.round(((item.price - item.selling_price) / item.price) * 100);
 
             return (

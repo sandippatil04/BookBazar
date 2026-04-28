@@ -91,7 +91,9 @@ export default function OrdersPage() {
 
                 <div className="space-y-3">
                   {order.items.map((item) => {
-                    const imageUrl = item.image ? `/uploads/${item.image}` : null;
+                    const imageUrl = item.image
+                      ? `${import.meta.env.VITE_API_URL}/uploads/${item.image}`
+                      : null;
                     return (
                       <div key={item.id} className="flex items-center gap-4 p-3 bg-gray-50 rounded-xl">
                         <div className="w-12 h-16 rounded-lg overflow-hidden bg-white flex-shrink-0">
