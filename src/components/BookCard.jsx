@@ -4,7 +4,7 @@ import { Tag, BookOpen } from 'lucide-react';
 export default function BookCard({ book }) {
   const discount = Math.round(((book.price - book.selling_price) / book.price) * 100);
   const imageUrl = book.image
-    ? `/uploads/${book.image}`
+    ? `${import.meta.env.VITE_API_URL}/uploads/${book.image}`
     : null;
 
   return (
