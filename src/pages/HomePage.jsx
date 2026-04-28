@@ -24,11 +24,11 @@ export default function HomePage() {
     }
   };
 
-  const filtered = books.filter(
-    (b) =>
-      b.title.toLowerCase().includes(search.toLowerCase()) ||
-      b.author.toLowerCase().includes(search.toLowerCase())
-  );
+  const filtered = (Array.isArray(books) ? books : []).filter(
+  (b) =>
+    b.title?.toLowerCase().includes(search.toLowerCase()) ||
+    b.author?.toLowerCase().includes(search.toLowerCase())
+);
 
   return (
     <div>
