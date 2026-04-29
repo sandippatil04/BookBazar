@@ -8,7 +8,7 @@ const team = [
     color: 'from-emerald-500 to-teal-500',
     shadow: 'shadow-emerald-200',
     desc: 'Architected the entire application from frontend to backend, ensuring seamless integration across all layers.',
-  },
+  }
 ];
 
 export default function AboutPage() {
@@ -45,13 +45,13 @@ export default function AboutPage() {
           <h2 className="mt-4 text-3xl font-bold text-gray-900">The People Behind BookBazar</h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="flex justify-center">
           {team.map((member) => {
             const Icon = member.icon;
             return (
               <div
                 key={member.name}
-                className="group p-6 bg-white rounded-2xl border border-gray-100 text-center hover:shadow-xl hover:shadow-gray-200/50 hover:-translate-y-1 transition-all duration-300"
+                className="group w-full max-w-sm p-6 bg-white rounded-2xl border border-gray-100 text-center hover:shadow-xl hover:shadow-gray-200/50 hover:-translate-y-1 transition-all duration-300"
               >
                 <div className={`w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br ${member.color} flex items-center justify-center shadow-lg ${member.shadow} group-hover:scale-110 transition-transform`}>
                   <Icon className="w-7 h-7 text-white" />
