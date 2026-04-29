@@ -9,30 +9,6 @@ const team = [
     shadow: 'shadow-emerald-200',
     desc: 'Architected the entire application from frontend to backend, ensuring seamless integration across all layers.',
   },
-  {
-    name: 'Vibhuti Patil',
-    role: 'Backend Developer',
-    icon: Database,
-    color: 'from-blue-500 to-cyan-500',
-    shadow: 'shadow-blue-200',
-    desc: 'Built robust APIs and database architecture with raw SQL queries for optimal performance and reliability.',
-  },
-  {
-    name: 'Siddhi Patil',
-    role: 'Frontend Developer (UI/UX)',
-    icon: Palette,
-    color: 'from-amber-500 to-orange-500',
-    shadow: 'shadow-amber-200',
-    desc: 'Crafted the modern, responsive UI with meticulous attention to design details and user experience.',
-  },
-  {
-    name: 'Vansh Patil',
-    role: 'Database Manager',
-    icon: Database,
-    color: 'from-rose-500 to-pink-500',
-    shadow: 'shadow-rose-200',
-    desc: 'Designed and managed the MySQL database schema, ensuring data integrity and efficient queries.',
-  },
 ];
 
 export default function AboutPage() {
