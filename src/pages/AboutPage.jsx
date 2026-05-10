@@ -2,13 +2,21 @@ import { Code, Database, Palette, Users } from 'lucide-react';
 
 const team = [
   {
-    name: 'Sandip Patil',
-    role: 'Full Stack Developer',
-    icon: Code,
-    color: 'from-emerald-500 to-teal-500',
-    shadow: 'shadow-emerald-200',
-    desc: 'Architected the entire application from frontend to backend, ensuring seamless integration across all layers.',
-  }
+  name: 'Sandip Patil',
+  role: 'Backend Developer',
+  icon: Code,
+  color: 'from-emerald-500 to-teal-500',
+  shadow: 'shadow-emerald-200',
+  desc: 'Developed backend APIs, authentication system, database integration, and server-side functionality for BookBazar.',
+},
+{
+  name: 'Vibhuti Patil',
+  role: 'Frontend Developer',
+  icon: Code,
+  color: 'from-cyan-500 to-blue-500',
+  shadow: 'shadow-cyan-200',
+  desc: 'Designed and developed modern, responsive user interfaces with smooth user experience and attractive layouts.',
+}
 ];
 
 export default function AboutPage() {
