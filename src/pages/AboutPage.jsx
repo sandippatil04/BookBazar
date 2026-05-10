@@ -53,7 +53,7 @@ export default function AboutPage() {
           <h2 className="mt-4 text-3xl font-bold text-gray-900">The People Behind BookBazar</h2>
         </div>
 
-        <div className="flex justify-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 justify-items-center">
           {team.map((member) => {
             const Icon = member.icon;
             return (
